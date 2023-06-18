@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <script>
+    // 2. WAP to print the table of 6.
+
+    const tableOf = prompt("Please enter the number!");
+    if (tableOf > 0) {
+      for (let i = 1; i <= 10; i++) {
+        let tableValue = tableOf * i;
+        document.write(`${tableOf} * ${i}  = ${tableValue} <br>`);
+      }
+    } else {
+      document.write(`Please provide the positve number!`);
+    }
+  </script>
+
+  <body></body>
+</html>

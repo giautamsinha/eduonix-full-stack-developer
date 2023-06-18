@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <script>
+    let possitveCount = 0;
+    let negativeCount = 0;
+    let zeroCount = 0;
+
+    let userNumberOfInputs = parseInt(
+      prompt("Enter the number of inputs.............")
+    );
+    if (userNumberOfInputs) {
+      for (let i = 0; i < userNumberOfInputs; i++) {
+        let numbers = parseInt(prompt("Enter the number..........."));
+        if (numbers > 0) {
+          possitveCount++;
+        } else if (numbers < 0) {
+          negativeCount++;
+        } else {
+          zeroCount++;
+        }
+      }
+      document.write(`Count of positive: ${possitveCount} <br>`);
+      document.write(`Count of negative: ${negativeCount} <br>`);
+      document.write(`Count of zero: ${zeroCount} <br>`);
+    } else {
+      document.write("Please provide a number");
+    }
+  </script>
+
+  <body></body>
+</html>

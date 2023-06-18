@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <script>
+    // 3. WAP to print factorial of 5. (5*4*3*2*1)
+
+    let factorailNumber = prompt("Please enter the number!");
+    let ans = 1;
+    if (factorailNumber == 0 || factorailNumber == 1) {
+      document.write(`Factorail of ${factorailNumber} is ${ans}`);
+    } else if (factorailNumber > 1) {
+      for (let i = factorailNumber; i >= 1; i--) {
+        ans = ans * i;
+      }
+      document.write(`Factorail of ${factorailNumber} is ${ans}`);
+    } else {
+      document.write(`Please provide the positve number!`);
+    }
+  </script>
+
+  <body></body>
+</html>
