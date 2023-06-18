@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <!-- Task-4:
+--------------
+
+create one object array of food items.
+
+[
+	{id:1,name:'buger',price:199},
+	{id:2,name:'fries regular',price:79},
+	{id:3,name:'fries jumbo',price:149},
+	{id:4,name:'float coke',price:59}
+]
+
+filter data with the price less than 100 and another filter with between 100-200.
+
+//show like under budget and over budget values. -->
+  <script>
+    const foodItem = [
+      { id: 1, name: "buger", price: 199 },
+      { id: 2, name: "fries regular", price: 79 },
+      { id: 3, name: "fries jumbo", price: 149 },
+      { id: 4, name: "float coke", price: 59 },
+    ];
+    const underBudgetItem = [];
+    const overBudgetItem = [];
+
+    const underBudget = foodItem.filter((item) => item.price < 100);
+    const overBudget = foodItem.filter(
+      (item) => item.price >= 100 && item.price <= 200
+    );
+
+    underBudget.forEach((item) => {
+      underBudgetItem.push({
+        Item: item.name,
+        Price: item.price,
+        budget: "under budget",
+      });
+    });
+
+    overBudget.forEach((item) => {
+      overBudgetItem.push({
+        Item: item.name,
+        Price: item.price,
+        budget: "over budget",
+      });
+    });
+    console.log("underBudgetItem", underBudgetItem);
+    console.log("overBudgetItem", overBudgetItem);
+  </script>
+  <body></body>
+</html>

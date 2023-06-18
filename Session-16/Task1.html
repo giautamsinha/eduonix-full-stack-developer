@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <!-- Task 1: use Reduce Method
+------------------------------------
+
+let cart=
+[
+	{
+	  product:'pen',
+	  qty:10,
+	  price:15
+	},
+	{
+          product:'Memory Card',
+	  qty:2,
+	  price:299
+	},
+	{
+	  product:'book',
+          qty:1,
+	  price:70
+	}
+]
+
+Hint: iterate with this array and print total amount
+	sum= sum+ (qty * price) 
+
+	initial value start with 0; -->
+
+    <script>
+        let cart=
+[
+	{
+	  product:'pen',
+	  qty:10,
+	  price:15
+	},
+	{
+          product:'Memory Card',
+	  qty:2,
+	  price:299
+	},
+	{
+	  product:'book',
+          qty:1,
+	  price:70
+	}
+]
+
+let totalSum = cart.reduce((sum , item)=>{
+     return sum+ (item.qty * item.price) 
+},0)
+console.log("totalsum" , totalSum)
+    </script>
+  <body></body>
+</html>

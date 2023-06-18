@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <!-- Task-2:
+  const students=[
+      {name:"alex",phy:89,chem:90,bio:91},
+      {name:"bob",phy:81,chem:67,bio:78},
+      {name:"catherine",phy:35,chem:40,bio:65},
+      {name:"devid",phy:90,chem:95,bio:75},
+  ]
+  
+  use map method and generate another array showing average of three marks
+  
+  resultant Array:
+  
+  const studentsAvg=[{name:"alex",avg:"90"},{name:"bob",avg:"90"},{name:"catherine",avg:"90"},{name:"devid",avg:"90"}] -->
+
+  <script>
+      const students=[
+      {name:"alex",phy:89,chem:90,bio:91},
+      {name:"bob",phy:81,chem:67,bio:78},
+      {name:"catherine",phy:35,chem:40,bio:65},
+      {name:"devid",phy:90,chem:95,bio:75},
+  ]
+const studentsAvg = [];
+  const calculateAverage = students.map((item , key)=>
+    
+    studentsAvg.push({name: item.name , avg:(item.phy + item.chem + item.bio)/3})
+
+  )
+
+  console.log("studentsAvg" , studentsAvg)
+  </script>
+  <body></body>
+</html>

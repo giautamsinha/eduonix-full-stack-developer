@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <!-- Task:5
+  ----------------
+  
+  create one empty array, take user input and store 10 array inside that empty array using push method.
+  
+ adjust the inserted numbers into descending order.
+  
+ Hint: -->
+  <script>
+    const array = [];
+
+    for (let i = 0; i < 10; i++) {
+      const userInput = prompt(`Enter array ${i + 1}:`);
+      const number = parseInt(userInput, 10);
+      array.push(number);
+    }
+    array.sort((a, b) => (a > b ? -1 : 1));
+
+    console.log(array);
+  </script>
+  <body></body>
+</html>

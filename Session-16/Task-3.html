@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+<!-- 
+  Task-3:
+  --------------------------------------------
+  const array= [90,89,56,88,77,53,91,64,23,44];
+  
+   1. filter only even numbers from this array.
+  
+   2. find Index of the number 53 and pring index as well as its value. -->
+  
+
+   <script>
+     const array= [90,89,56,88,77,53,91,64,23,44];
+     const fillterEven = array.filter((item) => item % 2 == 0)
+     console.log("fillterEven" , fillterEven)
+    const numberFind = 53
+     const findIndex = array.indexOf(numberFind)
+    if(findIndex !== -1){
+        console.log(`Index of ${numberFind} is ${findIndex} and its value is ${numberFind}`)
+    }
+
+     
+   </script>
+
+  <body></body>
+</html>
