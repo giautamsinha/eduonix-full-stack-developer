@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Session-18 Task-4</title>
+
+    <style>
+      .form-control {
+        width: 15%;
+      }
+    </style>
+  </head>
+
+  <!-- Task 4:  write a programm to get input from user in the form of string and reverse the string and check either string is palindrom or not.
+
+  convert your string into array
+  array has reverse function get the reverced string from array and then check original string and reversed string and if theya are same then print its palindrom. -->
+
+  <body>
+    <h1>palindrom</h1>
+
+    <div style="margin-left: 50px; margin-top: 30px">
+      <h2 id="text"></h2>
+      <ul id="showtodoList"></ul>
+    </div>
+  </body>
+</html>
+
+<script>
+  const string = prompt("Enter you string");
+
+  const stringArray = string.split("");
+  const reverseString = stringArray.reverse();
+
+
+  if (typeof string === "string") {
+    //     let newstring= "";
+    //     for(let i=string.length -1; i >=0; i--){
+    //         newstring =newstring+string[i]
+    //     }
+    //     var showlist =document.getElementById("showtodoList");
+    //     var list =document.createElement("li")
+    //    if(newstring == string){
+
+    //     list.innerHTML = `Given string ${string} are palindrom`
+
+    //    }else{
+
+    //     list.innerHTML = `Given string ${string} are not palindrom`
+
+    //    }
+
+    var showlist = document.getElementById("showtodoList");
+    var list = document.createElement("li");
+    if (stringArray === reverseString) {
+      list.innerHTML = `Given string ${string} are palindrom`;
+    } else {
+      list.innerHTML = `Given string ${string} are not palindrom`;
+    }
+
+    showlist.appendChild(list);
+  } else {
+    alert("Please enter text only");
+  }
+</script>

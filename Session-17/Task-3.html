@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <!-- 3. WAP to create a simple array of names and load the data of array in HTML list tag.
+ -->
+
+  <body>
+    <input type="button" value="Show List" onclick="submitButton()" />
+
+    <ul id="list">
+        
+    </ul>
+</html>
+
+<script>
+  function submitButton() {
+            var name= ['gautam' , 'harshit' , 'aman' ,'ayushi' ,'arun'];
+            var list = document.getElementById("list");
+            for(let val of name){
+                var li = document.createElement("li");
+                li.textContent = val;
+                list.appendChild(li);
+            }
+  }
+</script>

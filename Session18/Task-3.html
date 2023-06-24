@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Session-18 Task-3</title>
+
+    <style>
+      .form-control {
+        width: 15%;
+      }
+    </style>
+  </head>
+
+  <!-- Task 3: Write a program in js and create functions for cube, square, power and write logic like ask user to enter 1/2/3 based on that call the functions and show the result. -->
+  <body>
+    <h1>Cube Square and Power</h1>
+
+    <div style="margin-left: 50px; margin-top: 30px">
+      <h2 id="text"></h2>
+      <ul id="showtodoList"></ul>
+    </div>
+  </body>
+</html>
+
+<script>
+  const choice = parseInt(
+    prompt("Enter 1 for cube, 2 for square, or 3 for power:")
+  );
+  var text = document.getElementById("text");
+  var showList = document.getElementById("showtodoList");
+  var list = document.createElement("li");
+  switch (choice) {
+    case 1:
+      const cubeNum = parseFloat(prompt("Enter a number:"));
+      const cubeResult = cube(cubeNum);
+      text.innerHTML = "You selected cube operation";
+      list.innerHTML = `Cube of ${cubeNum} is: ${cubeResult}`;
+      showList.appendChild(list);
+      break;
+    case 2:
+      const squareNum = parseFloat(prompt("Enter a number:"));
+      const squareResult = square(squareNum);
+      text.innerHTML = "You selected square operation";
+      list.innerHTML = `Square of ${squareNum} is: ${squareResult}`;
+      showList.appendChild(list);
+      break;
+    case 3:
+      const baseNum = parseFloat(prompt("Enter a base number:"));
+      const exponentNum = parseFloat(prompt("Enter an exponent:"));
+      const powerResult = power(baseNum, exponentNum);
+      text.innerHTML = "You selected power operation";
+      list.innerHTML = `Power of ${exponentNum} is: ${powerResult}`;
+      showList.appendChild(list);
+      break;
+    default:
+      break;
+  }
+  function cube(nums) {
+    return nums ** 3;
+  }
+  function square(nums) {
+    return nums ** 2;
+  }
+  function power(nums, expo) {
+    return nums ** expo;
+  }
+</script>

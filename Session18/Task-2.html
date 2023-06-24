@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Session-18 Task-2</title>
+<script src="./Task-2.js"></script>
+
+    <style>
+      .form-control {
+        width: 15%;
+      }
+    </style>
+  </head>
+
+  <!-- Task2: Create Todo list application which contains class of todolist
+
+	class TodoList{
+
+		constructor(){
+			this.todos=[];
+		}
+
+		addTodo(task){	
+		}
+
+		deleteTodo(task){
+		}
+		
+		showAllTodos(){
+		}
+	}
+
+	include this file in your HTML and attach with your HTML inputs
+
+	if user enters values add it in your object and print below if user click on delete button then delete value from todos.
+ -->
+
+  <body>
+    <h1>TodoList</h1>
+
+    <form style="margin-left: 27px">
+      <div class="mb-3">
+        <label class="form-label">Task</label>
+        <input
+          type="text"
+          class="form-control"
+          id="task"
+          aria-describedby="emailHelp"
+          required
+        />
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="submitFunction()">
+        Add Task
+      </button>
+    </form>
+    <div style="margin-left: 50px; margin-top: 30px;">
+      <h2>Task List</h2>
+      <ul id="showtodoList"></ul>
+    </div>
+  </body>
+</html>
